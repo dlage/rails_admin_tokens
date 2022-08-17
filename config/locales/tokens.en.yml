@@ -1,0 +1,11 @@
+
+en:
+  admin:
+    actions:
+      tokens:
+        title: "Tokens"
+        menu: "Tokens for %{model_label} '%{object_label}'"
+        breadcrumb: "Tokens"
+        link: "Tokens"
+        bulk_link: "Tokens selected %{model_label_plural}"
+        done: "Tokensed"

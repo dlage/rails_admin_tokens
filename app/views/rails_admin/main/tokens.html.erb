@@ -1,0 +1,19 @@
+<h4>
+  <%= t("admin.token.do_you_want_to_refresh_access_token", model_name: @abstract_model.pretty_name.downcase) %>
+</h4>
+<h4><%= t('admin.token.current_tokens_title') %></h4>
+<p><%= t('admin.token.refresh_token_label') %>: <%= @object.refresh_token %></p>
+<p><%= t('admin.token.access_token_label') %>: <%= @object.access_token %></p>
+<%= form_for(@object, url: tokens_path(model_name: @abstract_model.to_param, id: @object.id), html: {method: "put"}) do %>
+  <input name="return_to" type="<%= :hidden %>" value="<%= (params[:return_to].presence || request.referer) %>" />
+  <div class="form-actions">
+    <button class="btn btn-info" data-disable-with="<%= t("admin.form.confirmation") %>" name="_refresh" type="submit">
+      <i class="fas fa-sync"></i>
+      <%= t("admin.form.refresh") %>
+    </button>
+    <button class="btn" data-disable-with="<%= t("admin.form.cancel") %>" name="_continue" type="submit">
+      <i class="fas fa-times"></i>
+      <%= t("admin.form.cancel") %>
+    </button>
+  </div>
+<% end %>
