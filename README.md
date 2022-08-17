@@ -1,8 +1,24 @@
 # RailsAdminTokens
-This action
+This Rails Admin action allows you to configure an action to be called on the object.
+The motivation behind this was to manually update oauth2 tokens but can be used to call any action on the object.
 
 ## Usage
-How to use my plugin.
+After adding this gem to your bundle, you can setup your rails_admin initializer to include tokens, like so:
+```ruby
+  config.actions do
+      dashboard                     # mandatory
+      index                         # mandatory
+      # ...
+    
+      tokens do
+        only ['MyTargetUser']
+      end
+  end
+```
+Customize your view:
+````ruby
+# views/rails_admin/main/tokens.html.erb
+````
 
 ## Installation
 Add this line to your application's Gemfile:
