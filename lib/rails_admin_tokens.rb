@@ -1,9 +1,9 @@
 require "rails_admin_tokens/version"
 require "rails_admin_tokens/engine"
 
-module RailsAdminTokens
-  # Your code goes here...
-end
+#module RailsAdminTokens
+# Your code goes here...
+#end
 
 require 'rails_admin/config/actions'
 

@@ -8,4 +8,4 @@ en:
         breadcrumb: "Tokens"
         link: "Tokens"
         bulk_link: "Tokens selected %{model_label_plural}"
-        done: "Tokensed"
+        done: "Tokens Refreshed"

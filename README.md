@@ -5,6 +5,7 @@ The motivation behind this was to manually update oauth2 tokens but can be used 
 ## Usage
 After adding this gem to your bundle, you can setup your rails_admin initializer to include tokens, like so:
 ```ruby
+# config/initializers/rails_admin.rb
   config.actions do
       dashboard                     # mandatory
       index                         # mandatory
@@ -12,6 +13,7 @@ After adding this gem to your bundle, you can setup your rails_admin initializer
     
       tokens do
         only ['MyTargetUser']
+        refresh_method :my_custom_method
       end
   end
 ```
